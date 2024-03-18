@@ -1,0 +1,20 @@
+@import './_vars.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg;
+  color: $color;
+  font-size: 14px;
+  font-family: 'Roboto Condensed', 'Arial Narrow', Arial, sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
