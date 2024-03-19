@@ -1,12 +1,15 @@
 @import '../../../../shared/_vars.scss';
 
 .footer {
+  border-top: 2px solid #282828;
+}
+
+.wrapper {
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid #282828;
-  color: #b8b8a2;
+  color: $green;
 }
 
 .link {

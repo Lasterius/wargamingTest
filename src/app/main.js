@@ -1,6 +1,5 @@
-import { MainPage } from '../pages/mainPage/index';
+import { CalcPage } from '../pages/calcPage/index';
 import '../shared/global.scss';
 
-document.querySelector('#app').innerHTML = `
-  ${MainPage()}
-`;
+const appContainer = document.querySelector('#app');
+appContainer.insertAdjacentHTML('beforeend', CalcPage());

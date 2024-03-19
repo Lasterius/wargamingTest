@@ -1,4 +1,71 @@
+@import '../../../shared/_vars.scss';
+
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   width: 20%;
-  background-color: brown;
+}
+
+.discord {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 50px;
+  display: inline-flex;
+  align-items: center;
+
+  a {
+    color: $orange;
+  }
+
+  img {
+    margin-left: 5px;
+    height: 15px;
+  }
+}
+
+.newsTitle {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  a {
+    color: $green;
+  }
+
+  :hover {
+    color: lighten($green, 20%);
+    transition: color 0.2s;
+  }
+}
+
+.item {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.body {
+  color: $green;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+.bottomGroup {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: lighten($green, 20%);
+    display: inline-flex;
+    align-items: center;
+  }
 }
