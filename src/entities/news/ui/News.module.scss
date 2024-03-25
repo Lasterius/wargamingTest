@@ -5,7 +5,11 @@ a {
 }
 
 .wrapper {
-  width: 20%;
+  width: 15%;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .discord {
@@ -15,6 +19,10 @@ a {
   margin-bottom: 50px;
   display: inline-flex;
   align-items: center;
+
+  @media (max-width: 1220px) {
+    font-size: 10px;
+  }
 
   a {
     color: $orange;
@@ -62,6 +70,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1320px) {
+    font-size: 8px;
+  }
+
+  :hover {
+    text-decoration: underline;
+    transition: all 0.2s;
+  }
 
   a {
     color: lighten($green, 20%);

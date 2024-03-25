@@ -44,4 +44,13 @@ export const newsData = [
     linkName: 'Новости',
     discord: 'https://discord.gg/world-of-tanks',
   },
+  {
+    id: 6,
+    title: 'Редкая награда',
+    body: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque ab perferendis numquam deleniti necessitatibus, id nisi eius enim ipsam dignissimos ratione soluta, adipisci sit dolorum, voluptatibus incidunt. Quas, maxime sequi?',
+    link: '/news',
+    date: '13.03.2024',
+    linkName: 'Новости',
+    discord: 'https://discord.gg/world-of-tanks',
+  },
 ];

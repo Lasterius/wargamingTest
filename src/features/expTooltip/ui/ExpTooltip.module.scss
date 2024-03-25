@@ -1,0 +1,383 @@
+@import '../../../shared/_vars.scss';
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+
+  h4 {
+    font-size: 28px;
+    color: $green;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.leftSide,
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftSide {
+  width: 60%;
+  height: 100%;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 60%;
+  }
+}
+.rightSide {
+  width: 35%;
+  height: 100%;
+
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 35%;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column-reverse;
+  }
+
+  h4 {
+    margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.equipment {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  @media (max-width: 576px) {
+    align-items: center;
+  }
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 576px) {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    width: 33%;
+  }
+
+  input[type='radio'] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @media (max-width: 768px) {
+      width: 12px;
+      height: 12px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: #fff;
+      height: 14px;
+      width: 14px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #fff;
+      }
+    }
+
+    &:hover::before {
+      background-color: #c7c6c6;
+      transition: all 0.2s ease;
+    }
+
+    &:checked::before {
+      background-color: #676767;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    font-size: 18px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 10px;
+    }
+  }
+}
+
+.battlesCount {
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #4f4f4f, #313131);
+  border: 1px solid #727272;
+  border-radius: 4px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 13px;
+  padding: 4px;
+  position: relative;
+  height: 13px;
+  padding: 4px 0;
+  background: linear-gradient(to right, #262626, #303030);
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background: url('../../../../public/controller.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    z-index: 100;
+
+    @media (max-width: 768px) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 44px;
+    height: 44px;
+    background: url('../../../../public/controller.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+
+    @media (max-width: 768px) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.sliderValue {
+  width: 100%;
+  height: 48px;
+  align-self: flex-end;
+  border: 4px solid black;
+  border-radius: 4px;
+  padding: 2px 10px 2px 40px;
+
+  @media (max-width: 768px) {
+    height: 30px;
+  }
+
+  @media (max-width: 576px) {
+    width: 60%;
+    align-self: center;
+  }
+
+  background: linear-gradient(
+    135deg,
+    #4d4a3d 5%,
+    #6e653f 10%,
+    #4d4a3d 15%,
+    #6e653f 20%,
+    #4d4a3d 25%,
+    #6e653f 30%,
+    #4d4a3d 35%,
+    #6e653f 40%,
+    #4d4a3d 45%,
+    #6e653f 50%,
+    #4d4a3d 55%,
+    #6e653f 60%,
+    #4d4a3d 65%,
+    #6e653f 70%,
+    #4d4a3d 75%,
+    #6e653f 80%,
+    #4d4a3d 85%,
+    #6e653f 90%,
+    #4d4a3d 95%,
+    #6e653f 100%
+  );
+
+  &:focus-within {
+    border: 4px solid $yellow;
+  }
+
+  input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    color: $green;
+    font-size: 34px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+
+    animation: changeNumber 0.5s ease-in-out;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.expWrapper {
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.tankExp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    margin-right: 20px;
+
+    @media (max-width: 1024px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.tankExpValue {
+  width: 100%;
+  height: 100%;
+  color: #262626;
+  font-size: 56px;
+  font-weight: 700;
+  color: $yellow;
+
+  @media (max-width: 1320px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 576px) {
+    align-self: center;
+    font-size: 30px;
+  }
+}
+
+@keyframes changeNumber {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

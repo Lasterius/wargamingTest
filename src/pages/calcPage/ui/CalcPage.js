@@ -1,4 +1,4 @@
-import { Banner } from '../../../entities/banner';
+import { Banner } from '../../../shared/banner';
 import { CalcAndNews } from '../../../widgets/calcAndNews';
 import { Layout } from '../../../widgets/layout';
 

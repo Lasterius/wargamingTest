@@ -7,11 +7,18 @@ export const News = props => {
     return `<li class=${css.item} id=${item.id}>
         <h4 class=${css.title}>${item.title}</h4>
         <p class=${css.body}>${item.body}</p>
-        <div class=${css.bottomGroup}><a href=${item.link}>${item.linkName}</a> ${item.date} <a href=${item.discord}><img src=${Discord} alt='discord'></img>Обсудить</a></div>
+        <div class=${css.bottomGroup}>
+          <a href=${item.link}>${item.linkName}</a> 
+          ${item.date} 
+          <a href=${item.discord}>
+            <img src=${Discord} alt='discord'></img>
+            Обсудить
+          </a>
+        </div>
       </li>`;
   });
 
-  const slicedItems = items.slice(0, 3);
+  const slicedItems = items.slice(0, 5);
 
   return `
       <div class=${css.wrapper}>
@@ -23,7 +30,7 @@ export const News = props => {
         </div>
         <h3 class=${css.newsTitle}><a href='/news'>Читайте также</a></h3>
         <ul>
-          ${items.length > 3 ? slicedItems.join('') : items.join('')}
+          ${items.length > 5 ? slicedItems.join('') : items.join('')}
         </ul>
       </div>
     `;

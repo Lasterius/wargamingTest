@@ -9,8 +9,6 @@ export const Layout = props => {
       `;
   });
 
-  console.log(children.join(''));
-
   return `
       ${Header()}
       <main class=${css.main}>
